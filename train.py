@@ -21,13 +21,13 @@ NUM_WORKERS = 2
 PIN_MEMORY = True
 LOAD_MODEL = False
 LOAD_MODEL_FILE = "overfit.pth.tar"
-IMG_DIR = "C:\\Users\\LastHour\\Desktop\\ML_folder\\Computer vsion\YOLO\yolov5\\floss detection\\20DH-2DH-data_augmentaion\\images"
-LABEL_DIR = "C:\\Users\\LastHour\\Desktop\\ML_folder\\Computer vsion\YOLO\yolov5\\floss detection\\20DH-2DH-data_augmentaion\\labels"
+IMG_DIR = "C:\\Users\\LastHour\\Desktop\\ML_folder\\Computer_vsion\YOLO\yolov5\\floss detection\\20DH-2DH-data_augmentaion\\images"
+LABEL_DIR = "C:\\Users\\LastHour\\Desktop\\ML_folder\\Computer_vsion\YOLO\yolov5\\floss detection\\20DH-2DH-data_augmentaion\\labels"
 
 transform = transforms.Compose([
     transforms.ToTensor(),
-    transforms.Resize(416, interpolation=3),
-    transforms.CenterCrop(416),
+    transforms.Resize(256, interpolation=3),
+    transforms.CenterCrop(224),
     
 ])
 
@@ -46,21 +46,22 @@ def train_fn(train_loader, model, optimizer, loss_fn):
 
     for batch_idx, (x, y) in enumerate(loop):
         x, y = x.to('cpu') , y.to('cpu')
-        print(model.darknet(x).shape)
-        #out = model(x).to('cpu')
+        
+        out = model(x).to('cpu')
 
-        #loss = loss_fn(out, y)
-        '''mean_loss.append(loss.item())
+        loss = loss_fn(out, y)
+        mean_loss.append(loss.item())
         optimizer.zero_grad()
         loss.backward()
-        optimizer.step()'''
+        optimizer.step()
 
         # update progress bar
-        #loop.set_postfix(loss=loss.item(),out_shape=out.shape)
-        
+        loop.set_postfix(loss=loss.item(),out_shape=out.shape)
         break
 
+
     print(f"Mean loss was {sum(mean_loss)/len(mean_loss)},{out.shape}")
+    
     
 
 for i in range(5):
