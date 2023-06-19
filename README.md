@@ -27,4 +27,4 @@ To train the YOLOv1 algorithm manually, please follow these steps:
 
 2- Locate the section of code where the training process is implemented. This section typically includes a loop over the dataset and training steps.
 
-3- Modify the training process as per your requirements. You can customize various aspects of the training, such as hyperparameters, optimization algorithms, data augmentation techniques, and more.
+3- Modify the training process as per your requirements. You can customize various aspects of the training, such as hyperparameters, optimization algorithms, and more.
