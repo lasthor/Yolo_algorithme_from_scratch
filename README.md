@@ -5,7 +5,7 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Usage](#data)
+- [data](#data)
 
 # Introduction
 The YOLOv1 algorithm revolutionized object detection by introducing a single-stage approach, where object localization and classification are performed simultaneously. This implementation is based on the original paper by Joseph Redmon et al. and aims to provide a straightforward implementation for easy understanding and usage.
