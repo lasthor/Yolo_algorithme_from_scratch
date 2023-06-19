@@ -1,0 +1,29 @@
+# YOLOv1 Algorithm Implementation
+#### This repository contains an implementation of the YOLOv1 (You Only Look Once) algorithm for object detection. YOLOv1 is an efficient real-time object detection algorithm that provides high accuracy while maintaining impressive speed.
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+
+
+# Introduction
+The YOLOv1 algorithm revolutionized object detection by introducing a single-stage approach, where object localization and classification are performed simultaneously. This implementation is based on the original paper by Joseph Redmon et al. and aims to provide a straightforward implementation for easy understanding and usage.
+
+# Installation
+To get started with this implementation, follow these steps:
+
+1- Clone this repository:
+git clone https://github.com/lasthor/Yolo_algorithme_from_scratch.git
+
+2-Install the required dependencies. You can use pip to install them:
+
+
+# Usage
+
+
+1-Open the train.py file in your preferred text editor or integrated development environment (IDE).
+
+2-Locate the section of code where the training process is implemented. This section typically includes a loop over the dataset and training steps.
+
+3-Modify the training process as per your requirements. You can customize various aspects of the training, such as hyperparameters, optimization algorithms, data augmentation techniques, and more.
+
